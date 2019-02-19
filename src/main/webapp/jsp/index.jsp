@@ -10,6 +10,11 @@
 <title>Insert title here</title>
 </head>
 <body>
+<div class="row">
 hello current time is : ${time}
+</div>
+<div class="row">
+	<label for ="myvalue"></label>
+</div>
 </body>
 </html>
