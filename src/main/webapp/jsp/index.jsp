@@ -4,6 +4,8 @@
 <!DOCTYPE html>
 <html>
 <head>
+<script type='text/javascript' src='<c:url value="/common/Jquery/jquery-3.3.1.js"/>'></script>
+<script type='text/javascript' src='<c:url value="/js/index.js"/>'></script>
 <meta charset="UTF-8">
 <title>Insert title here</title>
 </head>
