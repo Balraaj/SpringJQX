@@ -1,3 +1,3 @@
 $(document).ready(function () {
-		alert("Loaded");
+		$("label[for='myvalue']").html("Welcome to spring");
 });
