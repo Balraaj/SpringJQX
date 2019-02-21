@@ -1,4 +1,4 @@
-package com.example.demo;
+package com.webapp.home;
 
 import java.util.Date;
 
@@ -12,9 +12,9 @@ import org.springframework.web.bind.annotation.RequestMethod;
 @Controller
 public class HomeController {
 
-	@RequestMapping(value = "/", method = { RequestMethod.GET, RequestMethod.POST })
+	@RequestMapping(value = "/home", method = { RequestMethod.GET, RequestMethod.POST })
 	public String index(final HttpServletRequest request,final Model model) {
 		model.addAttribute("time", new Date().toString());
-		return "index";
+		return "home";
 	}
 }
