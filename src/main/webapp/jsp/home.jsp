@@ -49,9 +49,22 @@
   </div>
 </nav>
 <div class="row" style="margin-bottom: 5%; margin-top: 3%">
-	<div class="col-md-2 col-sm-2"></div>
-	<div class="col-md-2 col-sm-2">
+	<div class="col-md-1 col-sm-1"></div>
+	<div class="col-md-1 col-sm-1">
 		<div id="jqxDate"></div>
+	</div>
+	<div class="col-md-1 col-sm-1"></div>
+	<div class="col-md-1 col-sm-">
+		<input value="Set Null" type="button" id="btnNull" >
+	</div>
+	<div class="col-md-1 col-sm-">
+		<input value="Get Value" type="button" id="getValue" >
+	</div>
+	<div class="col-md-1 col-sm-">
+		<input id="dateInput" style="width: 90%">
+	</div>
+	<div class="col-md-1 col-sm-">
+		<input value="Set Date" type="button" id="setDate" >
 	</div>
 </div>
 <div class="row">
@@ -74,7 +87,7 @@
     <script type="text/javascript" src='<c:url value="/common/jqwidgets/jqxdatetimeinput.js"/>'></script>
     <script type="text/javascript" src='<c:url value="/common/jqwidgets/jqxcalendar.js"/>'></script>
     <script type="text/javascript" src='<c:url value="/common/jqwidgets/jqxtooltip.js"/>'></script>
-    
+    <script type="text/javascript" src='<c:url value="/common/jqwidgets/globalization/globalize.js"/>'></script>
     <script type="text/javascript" src='<c:url value="/js/home.js"/>'></script>
 </body>
 </html>

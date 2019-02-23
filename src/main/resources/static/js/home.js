@@ -54,13 +54,44 @@ $(document).ready(function () {
             
             
             initDate();
+            setListner();
         });
 
 
 function initDate(){
-	$("#jqxDate").jqxDateTimeInput({"width":"100","value":"2019-10"});
+	$("#jqxDate").jqxDateTimeInput({"width":"100","formatString":"yyyy-MM","showCalendarButton":false,"textAlign":"center"});
+	$("#jqxDate").jqxDateTimeInput({"value":new Date()});
 }
 
+function setListner(){
+	$("#btnNull").on("click",function(){
+		$("#jqxDate").jqxDateTimeInput({"value": null});
+	});
+	$("#getValue").on("click",function(){
+		var value = $("#jqxDate").jqxDateTimeInput("value");
+		alert($("#jqxDate").val());
+	});
+	
+	$("#setDate").on("click",function(){
+		var dateValue = $("#dateInput").val().trim();
+		var dateObject = null;
+		if((dateValue.length===6)&&(Number(dateValue))){
+			dateObject = new Date();
+			dateObject.setFullYear(Number(dateValue.substr(0,4)));
+			dateObject.setMonth(Number(dateValue.substr(4,2)));
+			dateObject.setDate(1);
+		}
+		$("#jqxDate").val(dateObject);
+	});
+	
+	$("#jqxDate").on("focusin",function(){
+		$("#jqxDate").jqxDateTimeInput({"formatString":"yyyyMM"});
+	});
+	
+	$("#jqxDate").on("focusout",function(){
+		$("#jqxDate").jqxDateTimeInput({"formatString":"yyyy-MM"});
+	});
+}
 
 
 
