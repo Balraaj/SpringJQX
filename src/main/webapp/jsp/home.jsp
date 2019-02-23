@@ -48,10 +48,18 @@
     </form>
   </div>
 </nav>
-
-<div id='jqxWidget' style="font-size: 13px; font-family: Verdana; float: left; margin-top: 5%; margin-left: 24%;">
+<div class="row" style="margin-bottom: 5%; margin-top: 3%">
+	<div class="col-md-2 col-sm-2"></div>
+	<div class="col-md-2 col-sm-2">
+		<div id="jqxDate"></div>
+	</div>
+</div>
+<div class="row">
+	<div id='jqxWidget' style="font-size: 13px; font-family: Verdana; float: left; margin-top: 5%; margin-left: 24%;">
         <div id="jqxgrid"></div>
     </div>
+</div>
+<div class="row" style="margin-top: 5%; "></div>
 <script type='text/javascript' src='<c:url value="/common/Jquery/jquery-3.3.1.js"/>'></script>
 <script type='text/javascript' src='<c:url value="/common/bootstrap-4.0.0-dist/js/bootstrap.bundle.js"/>'></script>
 
@@ -62,6 +70,10 @@
     <script type="text/javascript" src='<c:url value="/common/jqwidgets/jqxmenu.js"/>'></script>
     <script type="text/javascript" src='<c:url value="/common/jqwidgets/jqxgrid.js"/>'></script>
     <script type="text/javascript" src='<c:url value="/common/jqwidgets/jqxgrid.selection.js"/>'></script>
+    
+    <script type="text/javascript" src='<c:url value="/common/jqwidgets/jqxdatetimeinput.js"/>'></script>
+    <script type="text/javascript" src='<c:url value="/common/jqwidgets/jqxcalendar.js"/>'></script>
+    <script type="text/javascript" src='<c:url value="/common/jqwidgets/jqxtooltip.js"/>'></script>
     
     <script type="text/javascript" src='<c:url value="/js/home.js"/>'></script>
 </body>

@@ -51,4 +51,16 @@ $(document).ready(function () {
                   { text: 'Total', datafield: 'total', width: 100, cellsalign: 'right', cellsformat: 'c2' }
                 ]
             });
+            
+            
+            initDate();
         });
+
+
+function initDate(){
+	$("#jqxDate").jqxDateTimeInput({"width":"100","value":"2019-10"});
+}
+
+
+
+
