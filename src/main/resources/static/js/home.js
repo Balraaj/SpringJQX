@@ -64,6 +64,7 @@ function initDate(){
 }
 
 function setListner(){
+	$("#getData").on("click",getDropDownData);
 	$("#btnNull").on("click",function(){
 		$("#jqxDate").jqxDateTimeInput({"value": null});
 	});
@@ -93,5 +94,14 @@ function setListner(){
 	});
 }
 
-
+function getDropDownData(){
+	$.ajax({
+		  url: "http://localhost:9090/employeeHelper/getDropDownData/",
+		})
+		  .done(function( data ) {
+		    if ( console && console.log ) {
+		      console.log( "Sample of data:", data.slice( 0, 100 ) );
+		    }
+		  });
+}
 

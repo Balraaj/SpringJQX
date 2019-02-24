@@ -66,7 +66,19 @@
 	<div class="col-md-1 col-sm-">
 		<input value="Set Date" type="button" id="setDate" >
 	</div>
+	<div class="col-md-1 col-sm-">
+		<input value="Get Data" type="button" id="getData" >
+	</div>
 </div>
+
+<div class="row" style="margin-bottom: 5%; margin-top: 3%">
+	<div class="col-md-1 col-sm-1"></div>
+	<div class="col-md-1 col-sm-1">
+		<div id="jqxDropDown"></div>
+	</div>
+</div>
+
+
 <div class="row">
 	<div id='jqxWidget' style="font-size: 13px; font-family: Verdana; float: left; margin-top: 5%; margin-left: 24%;">
         <div id="jqxgrid"></div>
@@ -88,6 +100,11 @@
     <script type="text/javascript" src='<c:url value="/common/jqwidgets/jqxcalendar.js"/>'></script>
     <script type="text/javascript" src='<c:url value="/common/jqwidgets/jqxtooltip.js"/>'></script>
     <script type="text/javascript" src='<c:url value="/common/jqwidgets/globalization/globalize.js"/>'></script>
+    
+    
+    <script type="text/javascript" src='<c:url value="/common/jqwidgets/jqxscrollbar.js"/>'></script>
+    <script type="text/javascript" src='<c:url value="/common/jqwidgets/jqxlistbox.js"/>'></script>
+    <script type="text/javascript" src='<c:url value="/common/jqwidgets/jqxdropdownlist.js"/>'></script>
     <script type="text/javascript" src='<c:url value="/js/home.js"/>'></script>
 </body>
 </html>
