@@ -61,6 +61,19 @@ $(document).ready(function () {
 function initDate(){
 	$("#jqxDate").jqxDateTimeInput({"width":"100","formatString":"yyyy-MM","showCalendarButton":false,"textAlign":"center"});
 	$("#jqxDate").jqxDateTimeInput({"value":new Date()});
+	 $("#numberInput").jqxNumberInput({
+	     width: '250px',
+	     height: '25px',
+	     inputMode: 'simple',
+	     decimalDigits: 3,
+	     digits: 5
+	 });
+	 
+	 $("#numberInput").keyup(function(){
+		 
+	 });
+	 
+	 $("#numberInput").val("asdf");
 }
 
 function setListner(){
@@ -101,7 +114,33 @@ function getDropDownData(){
 		  .done(function( data ) {
 		    if ( console && console.log ) {
 		      console.log( "Sample of data:", data.slice( 0, 100 ) );
+		      initDropDown(data);
 		    }
 		  });
+}
+
+function initDropDown(data){
+	var source ={
+	    datatype: "array",
+	    datafields: [
+	        { name: 'id' },
+	        { name: 'name' }
+	    ],
+	    localdata: data
+	};
+	var dataAdapter = new $.jqx.dataAdapter(source);
+	
+	$("#jqxDropDown").jqxDropDownList({ 
+		source: dataAdapter, 
+		width: '200px', 
+		height: '25px',
+		displayMember: id,
+		valueMember: name,
+		renderer: function (index, label, value, a, b, c, d ,e, f) {
+		    var datarecord = dataAdapter.records[index];
+		    return datarecord.id + "    " + datarecord.name;
+		},
+		enableSelection:true
+	});
 }
 

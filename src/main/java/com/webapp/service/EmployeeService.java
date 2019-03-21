@@ -3,17 +3,19 @@ package com.webapp.service;
 import java.util.List;
 import java.util.stream.Collectors;
 
-import com.webapp.dao.EmployeeDao;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Component;
+
+import com.webapp.dao.JDBCTemplateEmployeeDao;
 import com.webapp.entity.Employee;
 import com.webapp.model.DropDownModelEmployee;
 
+@Component
 public class EmployeeService {
 
-	private EmployeeDao employeeDao;
+	@Autowired
+	private JDBCTemplateEmployeeDao employeeDao;
 	
-	public EmployeeService() {
-		employeeDao = new EmployeeDao();
-	}
 	
 	public List<DropDownModelEmployee> getDropDownList(){
 		List<Employee> employeeList = employeeDao.getAll();
@@ -28,4 +30,9 @@ public class EmployeeService {
 		dropDownRow.setName(employee.getFirstName()+" "+employee.getLastName());
 		return dropDownRow;
 	}
+	
+	private void fun(List<Employee> list) {
+		list.stream().<Number>map(row-> row.getFirstName().length()==10?10:20.9).collect(Collectors.toList());
+	}
+	
 }

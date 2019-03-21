@@ -76,6 +76,11 @@
 	<div class="col-md-1 col-sm-1">
 		<div id="jqxDropDown"></div>
 	</div>
+	
+	<div class="col-md-1 col-sm-1"></div>
+	<div class="col-md-1 col-sm-1">
+		<div id="numberInput"></div>
+	</div>
 </div>
 
 
@@ -97,6 +102,7 @@
     <script type="text/javascript" src='<c:url value="/common/jqwidgets/jqxgrid.selection.js"/>'></script>
     
     <script type="text/javascript" src='<c:url value="/common/jqwidgets/jqxdatetimeinput.js"/>'></script>
+    <script type="text/javascript" src='<c:url value="/common/jqwidgets/jqxnumberinput.js"/>'></script>
     <script type="text/javascript" src='<c:url value="/common/jqwidgets/jqxcalendar.js"/>'></script>
     <script type="text/javascript" src='<c:url value="/common/jqwidgets/jqxtooltip.js"/>'></script>
     <script type="text/javascript" src='<c:url value="/common/jqwidgets/globalization/globalize.js"/>'></script>
