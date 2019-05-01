@@ -22,12 +22,7 @@ public class EmployeeDao {
 			while(rs.next()) {
 				Employee employee = new Employee();
 				employee.setId(rs.getInt(1));
-				employee.setFirstName(rs.getString(2));
-				employee.setLastName(rs.getString(3));
-				employee.setDesignationId(rs.getInt(4));
-				employee.setType(rs.getString(5));
-				employee.setUserName(rs.getString(6));
-				employee.setPassword(rs.getString(7));
+				employee.setName(rs.getString(2));
 				employeeList.add(employee);
 			}
 		}

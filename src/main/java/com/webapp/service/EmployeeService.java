@@ -27,12 +27,12 @@ public class EmployeeService {
 	private DropDownModelEmployee mapToDropDownModel(Employee employee) {
 		DropDownModelEmployee dropDownRow = new DropDownModelEmployee();
 		dropDownRow.setId(String.valueOf(employee.getId()));
-		dropDownRow.setName(employee.getFirstName()+" "+employee.getLastName());
+		dropDownRow.setName(employee.getName());
 		return dropDownRow;
 	}
 	
 	private void fun(List<Employee> list) {
-		list.stream().<Number>map(row-> row.getFirstName().length()==10?10:20.9).collect(Collectors.toList());
+		list.stream().<Number>map(row-> row.getName().length()==10?10:20.9).collect(Collectors.toList());
 	}
 	
 }

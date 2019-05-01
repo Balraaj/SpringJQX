@@ -26,18 +26,13 @@ public class JDBCTemplateEmployeeDao {
 			System.out.println("ITS NULL --------------------");
 		}
 		//return jdbcTemplate.queryForList("SELECT * FROM employeesdatabase;", Employee.class,new Object());
-		return jdbcTemplate.query("SELECT * FROM employeesdatabase;", new RowMapper<Employee>(){
+		return jdbcTemplate.query("SELECT * FROM employee;", new RowMapper<Employee>(){
 
 			@Override
 			public Employee mapRow(ResultSet rs, int rowNum) throws SQLException {
 				Employee employee = new Employee();
 				employee.setId(rs.getInt(1));
-				employee.setFirstName(rs.getString(2));
-				employee.setLastName(rs.getString(3));
-				employee.setDesignationId(rs.getInt(4));
-				employee.setType(rs.getString(5));
-				employee.setUserName(rs.getString(6));
-				employee.setPassword(rs.getString(7));
+				employee.setName(rs.getString(2));
 				return employee;
 			}
 			
